@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic app</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body data-theme="light">
+    <div class="center">
+   <main class="container">
+    <div class="heading"><h3>quadratic solver</h3>
+        <div class="hold_checkbox">
+            <input type="checkbox" class="theme" name="" id="theme">
+        </div>    
+    </div>
+      
+   <section class="input_rows">
+    <div class="entities">
+        <label for="" class="input_label">Enter ax<sup>2</sup> :</label>
+    <input type="number" id="ax2" value="2" class="input_size ax2_input">
+</div>
+<div class="entities">
+<label for="" class="input_label">Enter bx :</label>
+    <input type="number" id="bx" value="6" class="input_size">
+</div>
+<div class="entities">
+<label for="" class="input_label">Enter c:</label>
+    <input type="number" value="4" id="c" class="input_size c_input">
+</div>
+   </section>
+   <section>
+    <div class="display_qstn" >
+     <span id="question"></span>
+    </div>
+
+   </section>
+   
+   <button class="calculate_btn" id="calculate">Calculate</button>
+   <section id="results"  class="Results">
+    <div  class="" id="results1">
+   <div class="x1_results">
+    <label for="">The value of x1 : </label>
+    <span id="x1"></span>
+</div>
+<div>
+    <label for="" >The value of x1 : </label>
+    <span id="x2"></span>
+</div>
+</div>
+   </section> 
+    </main>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>

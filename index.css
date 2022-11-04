@@ -1,0 +1,323 @@
+/* set colors for light mode */
+body[data-theme="light"]{
+--theme:hsl(240, 35%, 61%);
+--theme_2:white;
+--color:black;
+--inverse_color:white;
+--calculate_btn:#73619a;
+--calculate_btn_shadow:#bcb7c9;
+--border:#6e3c70;
+--results_bg:#e3acff;
+--main_shadow:#5b5b63;
+--checkbox_bg:#b39bd3;
+--question_bg:#d2c1ff;
+--error:red;
+}
+/* set colors for dark theme */
+body[data-theme="dark"]{
+--theme:#262626;
+--color:white;
+--inverse_color:black;
+--calculate_btn:#4dc970;
+--calculate_btn_shadow:#266638;
+--border:#4dc970;
+--results_bg:#385a42;
+--main_shadow:#111111;
+--question_bg:#629b72;
+--theme_2:#262626;
+--checkbox_bg:#4dc970;
+--error:rgb(206, 151, 151);
+}
+body{
+font-family: 'Poppins', sans-serif;
+display: flex;
+color: var(--color);
+justify-content: center;
+align-items: center;
+/* height: 100%;
+width: 100%; */
+padding-top: 4rem;
+background-color: var(--theme);
+}
+/*resuts styling*/
+
+.Results{
+    height: 3em;
+    width: 15em;
+    padding: 1em 0 0 2.5em ;
+    border: none;
+    border-radius: 8px;
+    color: var(--color);
+    background-color: var(--results_bg);
+    }
+.results{
+    display: block;
+}
+#results1{
+    display: block;
+}
+/* main container styling*/
+ .center{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+.container{
+background-color: var(--theme_2);   
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 2em 1em;
+height: 430px;  
+/* height: 65vh; */
+width: 25rem;  
+border: none ;
+border-radius: 5px;
+box-shadow: 0 0.6em 1em var(--main_shadow);
+}
+/*labels*/
+sup{
+    font-size: 10px;
+    color: var(--color);
+}
+.input_label{
+    margin-left: 0.5em;
+    font-weight: 550;
+    color: var(--color);
+
+}
+/*input styling*/
+.input_rows{
+    display :flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+.input_size{
+    display:block;
+    width:8em;
+    color: var(--color);
+    background-color: var(--theme_2);
+    font-weight: 600;
+    font-size: 0.8em;
+    outline: none;
+    border: none ;
+    border-radius: 5px;
+    border-bottom: 2px solid var(--border);
+    padding: 0.5em 0.5em;
+    margin:0.2em 0.5em ;
+}
+.input_size:focus{
+    font-size: 0.9em;
+    font-weight: 700;
+    border-bottom: 2.5px solid var(--border);
+}
+.ax2_input{
+    border-left: 2px solid var(--border);
+}
+.ax2_input:focus{
+    border-left: 2.5px solid var(--border);
+}
+.c_input{
+    border-right: 2px solid var(--border);
+}
+.c_input:focus{
+    border-right: 2.5px solid var(--border);
+}
+/*calculat button*/
+.calculate_btn{
+    height:3em; 
+    width: 60%;
+    padding: 0 15px 0 15px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-weight: 550;
+    font-size: 1em;
+    color: var(--inverse_color);
+    box-shadow: 0 3px  5px var(--calculate_btn_shadow);
+    background-color: var(--calculate_btn);
+}
+.calculate_btn:hover{
+    transform: scale(1.1);
+}
+/*display question*/
+.display_qstn{
+ height: 4em;
+ width: 20em;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: 550;
+ border: none; 
+ border-radius: 12px;
+ background-color: var(--question_bg);
+}
+/*show values*/
+.value{
+/* color: ; */
+font-weight: 500;
+}
+#x1,#x2{
+    font-weight: 600;
+}
+.x1_results{
+    margin-top: -4px;
+    margin-bottom: 0.5em;
+}
+/* arrange how heading wold look like */
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+     position: relative; 
+}
+/* holds the input type checkbox helps in positioning of before/after of the checkbox toogle */
+.hold_checkbox{
+    position: absolute;
+    left: 80%;
+    bottom:20% ;
+}
+/* styling the theme toogle changer */
+.theme{
+    appearance: none;
+    background-color:var(--checkbox_bg);
+    height: 26px;
+    width: 50px;
+    position:relative;
+    border: none;
+    border-radius: 15px;   
+
+}
+.theme::after{
+    content:"";
+    height: 20px;
+    width: 20px;
+    background-color:var(--inverse_color);
+    position: absolute;
+    left: 7%;
+    top: 11.5%;
+    border-radius: 50%;
+    transition: 700ms cubic-bezier(0.31, 0.54, 0.63, 1.1);
+}
+.theme:checked::after{
+    transform: translateX(23px);
+}
+.error{
+    color:var(--error);
+}
+.results4{
+    font-weight: 540;
+    color: var(--color);
+}
+@media only screen and (min-width:365px) and (max-width:478px){
+ body{
+    margin-top: -1.3em;
+ }
+ .container{
+    max-width: 300px;
+    
+    
+ }   
+ .input_size{
+    max-width: 5.8em;
+ }
+    
+}
+@media only screen and (max-width:325px){
+    .container{
+       max-width:14em;
+       max-height: 23em;
+    
+     } 
+     .input_size{
+        width: 4.1em;
+     } 
+     .display_qstn{
+        width: 15em;
+     }
+     .value{
+        font-size:0.9rem;
+     }
+     #x1,#x2{
+        font-size:0.9rem ;
+     }
+     .Results{
+        width: 11em;
+     }
+     .input_label{
+ font-size: small;
+     }
+     sup{
+        font-size: 0.6rem;
+     }
+    .heading{
+        font-size:small;
+    } 
+    .theme{
+        width: 2.3rem;
+        max-height: 1.2rem;
+    }
+    .theme::after{
+        width: .9rem;
+        height: .9rem;
+        left: 0.18rem;
+        top: 0.12rem;
+    }
+    .theme:checked::after{
+        transform: translateX(1rem);
+    }
+}
+@media only screen and (max-width:368px) and (min-width:326px) {
+  body{
+    margin-top: -1.2em;
+  }
+    .container{
+       
+       max-width: 15em;
+       max-height: 26em;
+       
+    
+     }   
+      .input_size{
+        width: 4.3em;
+     } 
+     .display_qstn{
+        width: 14.7em;
+     }
+     .value{
+        font-size:0.9rem;
+     }
+     #x1,#x2{
+        font-size:0.9rem ;
+     }
+     .Results{
+        width: 11em;
+     }
+     .input_label{
+ font-size: small;
+     }
+     sup{
+        font-size: 0.6rem;
+     }
+    .heading{
+        font-size:small;
+    } 
+    .theme{
+        width: 2.3rem;
+        max-height: 1.2rem;
+    }
+    .theme::after{
+        width: .9rem;
+        height: .9rem;
+        left: 0.18rem;
+        top: 0.13rem;
+    }
+    .theme:checked::after{
+        transform: translateX(1rem);
+    }
+} 
